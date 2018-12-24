@@ -15,3 +15,7 @@ func PiliClient(ak string, sk []byte, tran http.RoundTripper) *pili.Client {
 }
 
 var PiliClientWithMac = pili.New
+
+func PiliMac(ak string, sk []byte) *pili.MAC {
+	return &pili.MAC{ak, sk}
+}
